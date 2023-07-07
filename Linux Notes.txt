@@ -1,0 +1,89 @@
+There are two type of interface:
+a. CLI - Command Line Interface
+b. GUI - Graphical Uster Interface
+
+
+Commands:
+1. cd:- change directory
+2. ls:- list items
+3. pwd:- print working directory
+4. /:- is the root directory
+5. cd ..:- goes back to the previous directory
+6. mkdir:- make directory
+7. touch:- generates a txt file
+8. mv:- moves file in the directory
+9. cp:- copy file and directory
+10. sudo:- overwriting access
+11. su(#):- super user
+12. apt:- application
+13. apt-get update:- updates the list of all the command
+14. . :- current directory
+15. .. :- parent directory
+16. clear:- clear the terminal console
+17. history:- shows all the commands executed in the terminal during its use. Hence, it is not advisable to use/write password in the command as it can be easily accessed.
+18. echo:- prints the content written in after it in the terminal
+19. printf:- same as echo but the content should be writtne inside "". It can contain the special characters inside "" using \.
+20. chmod:- used to change the permissions of the owner, group and public of a file or directory. It uses the integer and converts it into binery to derive the permission format for a file.
+21. top:- shows the top consuming resources.
+22. ps:- shows the running resources.
+23. kill:- it kills the running software or background activity.
+
+
+General:
+1. If we generate a file using touch and it starts with .format then linux considers it as a hidden file.
+2. Since linux file system is case sensitive, we can create multiple files of same name in the same directory.
+3. -rw-r--r-- 1 sunilx sunilx 0 Jul 7 21:15 2.txt
+	In the above details, -(User)(Group)(Public)
+	As we can see, User has rw-, Group has r-- and Public has r--
+	It means User has read, write permission, while members of group has read permission and Public has read permission.
+	It can be set by chmod calculator. (Read, Write, Execute)
+		chmod calculator gives a number by considering the selected as 1 and not selected as 0 and ultimately converting it into an integer.
+4. Press enter and then q to come out of a running operating in the terminal.
+5. By writing sudo su and pressing, it changes the command line from regular_user($) to super_user($). 
+
+
+Execution Pattern:
+1. ls - gives the list of all the items
+2. cd directory_name - changes the directory to the given name
+3. press TAB button to autocomplete the command
+4. cd .. - goes back to the previous node
+5. mkdir directory_name - generate the directory_name in the current directory
+6. touch file_name.txt - generate a txt file in the current directory
+7. mv path_of_file_to_be_moved.format path_where_file_will_be_moved - moves the file to the specified path.
+8. cp path_of_file_to_be_copied.format path_where_file_will_be_copied - copies the file to the destination path.
+9. sudo apt-get update - updates the file packages.
+10. sudo apt-get upgrade - installs the updated packages into the kernal
+11. ls -R - gives the list of files and directory and then shows the content of the directories also
+12. ls -a - shows all the files including hidden files in the current directory
+13. ls -lart:
+	The ls command in Linux is used to list the contents of a directory. The -lart options are used to display the following information about each file or directory:
+
+			l: Long listing format. This shows one file in each line with additional information such as permissions, ownership, size, timestamps, etc.
+			a: All files. This includes hidden files, which are files whose names start with a period (.).
+			r: Reverse order. This lists the files and directories in reverse order, with the most recently modified file or directory listed first.
+			t: Time. This sorts the files and directories by their last modification time, with the most recently modified file or directory listed first.
+14. sudo apt install software - installs the software inside the system or server.
+15. chmod _number_ file.format - changes the file permission format according to the number
+16. ps -a - shows all the current resources in descending order as per the resourece consumption.
+17. kill int(process_id) - terminate the software corresponding to the process_id
+18. apt install vim (Mode: super_user(#)) - installs vim a text editor in linux
+	vim is a text editor.
+	command: vim file.txt --> open the content of the file.
+			After this, press "i" to enter into insert mode and then start entering the data. Then press escape to come out of the insert mode. press :wq and save the file along with the written concent in it.
+			If we want to open a file and by mistake alter its content, we can exit from the file without altering by just pressing the command :q!. We will comeout of the file without altering the existing data.
+			
+			
+Users in linux:
+1. Regular User($): Will have home directory. Have full permission in its home directory but cannot access other users directory
+2. Root User: Full access to all directory a.k.a Super User or Admin. By just typing sudo before any command, all the codes can be accessed. 
+Also by using sudo su before a command, all the things can be done as su stand for super_user(#) but this is not advicible.
+3. Service User
+
+
+Absolute Vs Relative Path:
+/ is root node.
+bin, etc, apps, ....
+and further files in each of the above directory.
+This forms a tree.
+Absolute path: starts with "/" as root and goes till the desired path.
+Relavite path: take the current wording directory and moves relative to that by .. or by cd and path name inside its current directory.
