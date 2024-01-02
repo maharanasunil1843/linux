@@ -40,7 +40,7 @@ General:
 		chmod calculator gives a number by considering the selected as 1 and not selected as 0 and ultimately converting it into an integer.
 4. Press enter and then q to come out of a running operating in the terminal.
 5. By writing sudo su and pressing, it changes the command line from regular_user($) to super_user($). 
-
+Type rm -r my_directory and press "Enter"
 
 Execution Pattern:
 1. ls - gives the list of all the items
